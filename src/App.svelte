@@ -19,10 +19,3 @@
 <Router {routes} />
 
 <main></main>
-
-<style>
-  div {
-    color: red;
-    font-size: 50px;
-  }
-</style>
