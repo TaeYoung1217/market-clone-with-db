@@ -8,14 +8,13 @@ import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   // ...
   // The value of `databaseURL` depends on the location of the database
-  databaseURL:
-    "https://carrot-market-76774-default-rtdb.asia-southeast1.firebasedatabase.app/",
-  storageBucket: "gs://carrot-market-76774.appspot.com",
-  apiKey: "AIzaSyAlLNlvEKXEdveugn-B8Snn72dinPMzBFE",
-  authDomain: "carrot-market-76774.firebaseapp.com",
-  projectId: "carrot-market-76774",
-  messagingSenderId: "635040660058",
-  appId: "1:635040660058:web:40fb193546e139a9ddf663",
+  databaseURL: import.meta.env.VITE_DB_URL,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  messagingSenderId: import.meta.env.VITE_MESSAGE_ID,
+  appId: import.meta.env.VITE_APP_ID,
   measurementId: "G-WFM8RN1RRG",
 };
 
