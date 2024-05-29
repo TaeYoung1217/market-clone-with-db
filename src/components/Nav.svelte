@@ -1,11 +1,27 @@
+<script>
+  export let location;
+
+  const moveToHome = () => {
+    window.location.hash = "/";
+  };
+
+  const moveToMyPage = () => {
+    window.location.hash = "/my";
+  };
+</script>
+
 <footer>
   <div class="footer-block">
-    <div class="footer-icons">
+    <button class="footer-icons" on:click={moveToHome}>
       <div class="footer-icons__img">
-        <img src="assets/home.svg" alt="" />
+        {#if location === "home"}
+          <img src="assets/home.svg" alt="" />
+        {:else}
+          <img src="assets/home_outline.svg" alt="" />
+        {/if}
       </div>
       <div>홈</div>
-    </div>
+    </button>
 
     <div class="footer-icons">
       <div class="footer-icons__img">
@@ -28,11 +44,15 @@
       <div>채팅</div>
     </div>
 
-    <div class="footer-icons">
+    <button class="footer-icons" on:click={moveToMyPage}>
       <div class="footer-icons__img">
-        <img src="assets/user.svg" alt="" />
+        {#if location === "my"}
+          <img src="assets/user_solid.svg" alt="" />
+        {:else}
+          <img src="assets/user.svg" alt="" />
+        {/if}
       </div>
       <div>나의 당근</div>
-    </div>
+    </button>
   </div>
 </footer>
