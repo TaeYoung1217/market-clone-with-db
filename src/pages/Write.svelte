@@ -1,6 +1,7 @@
 <script>
   import { getDatabase, ref, push } from "firebase/database";
-  import Footer from "../components/Nav.svelte";
+  import imageCompression from "browser-image-compression";
+
   import {
     getStorage,
     ref as refImage,
