@@ -33,10 +33,13 @@ footer {
   from {
     transform: translateY(-10px);
   }
+  to {
+    transform: translateY(-10px);
+  }
 }
 .footer-icons__img {
   width: 30px;
 }
 .footer-icons:hover .footer-icons__img {
-  animation: 2s icons-doong;
+  animation: 1s icons-doong;
 }

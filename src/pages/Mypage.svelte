@@ -1,6 +1,7 @@
 <script>
   import Nav from "../components/Nav.svelte";
   import { user$ } from "../store";
+
   const logout = () => {
     user$.set(null);
     localStorage.removeItem("token");
